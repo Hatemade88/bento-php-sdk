@@ -18,8 +18,7 @@
     ],
     "require": {
         "php": ">=7.1",
-        "guzzlehttp/guzzle": "^7.0",
-        "guzzlehttp/test-server": "^0.1.0"
+        "guzzlehttp/guzzle": "^6.5.0",
     },
     "autoload": {
         "classmap": [
