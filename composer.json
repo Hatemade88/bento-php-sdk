@@ -1,5 +1,5 @@
 {
-    "name": "bentonow/bento-php-sdk",
+    "name": "nothingtosaydev/bento-php-sdk",
     "description": "🍱 Bento PHP SDK and tracking library",
     "type": "library",
     "require-dev": {
