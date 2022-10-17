@@ -137,12 +137,14 @@ class BentoAPIV1
   {
     $result = $this->_batch->importEvents([
       'events' => [
-        'date' => isset($parameters['date']) ? $parameters['date'] : null,
-        'details' => [
-          'tag' => $parameters['tagName'],
-        ],
-        'email' => $parameters['email'],
-        'type' => BentoEvents::TAG,
+        [
+          'date' => isset($parameters['date']) ? $parameters['date'] : null,
+          'details' => [
+            'tag' => $parameters['tagName'],
+          ],
+          'email' => $parameters['email'],
+          'type' => BentoEvents::TAG,
+        ]
       ]
     ]);
 
@@ -173,10 +175,12 @@ class BentoAPIV1
   {
     $result = $this->_batch->importEvents([
       'events' => [
-        'date' => isset($parameters['date']) ? $parameters['date'] : null,
-        'email' => $parameters['email'],
-        'type' => BentoEvents::SUBSCRIBE,
-        'fields' => $parameters['fields'] ?? [],
+        [
+          'date' => isset($parameters['date']) ? $parameters['date'] : null,
+          'email' => $parameters['email'],
+          'type' => BentoEvents::SUBSCRIBE,
+          'fields' => $parameters['fields'] ?? [],
+        ]
       ]
     ]);
 
@@ -206,9 +210,11 @@ class BentoAPIV1
   {
     $result = $this->_batch->importEvents([
       'events' => [
-        'date' => isset($parameters['date']) ? $parameters['date'] : null,
-        'email' => $parameters['email'],
-        'type' => BentoEvents::UNSUBSCRIBE,
+        [
+          'date' => isset($parameters['date']) ? $parameters['date'] : null,
+          'email' => $parameters['email'],
+          'type' => BentoEvents::UNSUBSCRIBE,
+        ]
       ]
     ]);
 
@@ -238,10 +244,12 @@ class BentoAPIV1
   {
     $result = $this->_batch->importEvents([
       'events' => [
-        'date' => isset($parameters['date']) ? $parameters['date'] : null,
-        'email' => $parameters['email'],
-        'type' => BentoEvents::UPDATE_FIELDS,
-        'fields' => $parameters['fields'],
+        [
+          'date' => isset($parameters['date']) ? $parameters['date'] : null,
+          'email' => $parameters['email'],
+          'type' => BentoEvents::UPDATE_FIELDS,
+          'fields' => $parameters['fields'],
+        ]
       ]
     ]);
 
@@ -270,10 +278,12 @@ class BentoAPIV1
   {
     $result = $this->_batch->importEvents([
       'events' => [
-        'date' => isset($parameters['date']) ? $parameters['date'] : null,
-        'email' => $parameters['email'],
-        'type' => BentoEvents::PURCHASE,
-        'details' => $parameters['purchaseDetails'],
+        [
+          'date' => isset($parameters['date']) ? $parameters['date'] : null,
+          'email' => $parameters['email'],
+          'type' => BentoEvents::PURCHASE,
+          'details' => $parameters['purchaseDetails'],
+        ]
       ]
     ]);
 
